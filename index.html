@@ -18,9 +18,15 @@
         <p class="subtitle">Ask your concern below</p>
         <p class="status">Helpdesk Status: Online</p>
 
-        <button class="theme-btn" onclick="toggleTheme()">
-            Toggle Dark Mode
-        </button>
+        <button class="theme-btn" onclick="toggleTheme()">Toggle Dark Mode</button>
+
+        <div class="school-info">
+            <h3>School Information</h3>
+            <button onclick="quickQuestion('next semester')">Next Semester</button>
+            <button onclick="quickQuestion('enrollment week')">Enrollment Week</button>
+            <button onclick="quickQuestion('available courses')">Available Courses</button>
+            <button onclick="quickQuestion('course flowchart')">Course Flowcharts</button>
+        </div>
 
         <div id="chat-box" class="chat-box">
             <div class="bot-message">
@@ -42,8 +48,8 @@
         </div>
 
         <div class="file-area">
-            <label for="fileUpload">Attach File:</label>
-            <input type="file" id="fileUpload">
+            <label>Attach File:</label>
+            <input type="file">
             <small>Visual only for future ticket attachment.</small>
         </div>
 
