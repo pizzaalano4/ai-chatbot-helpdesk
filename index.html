@@ -1,29 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Chatbot Helpdesk System</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <div id="loader">
+        Loading Chatbot...
+    </div>
+
     <div class="chat-container">
+
         <h2>AI Chatbot Helpdesk System</h2>
         <p class="subtitle">Ask your concern below</p>
+        <p class="status">Helpdesk Status: Online</p>
+
+        <button class="theme-btn" onclick="toggleTheme()">
+            Toggle Dark Mode
+        </button>
 
         <div id="chat-box" class="chat-box">
             <div class="bot-message">
-                Hello! How can I help you today?
+                🤖 Hello! How can I help you today?
+                <div class="time">Now</div>
             </div>
+        </div>
+
+        <div class="faq-buttons">
+            <button onclick="quickQuestion('office hours')">Office Hours</button>
+            <button onclick="quickQuestion('enrollment')">Enrollment</button>
+            <button onclick="quickQuestion('password reset')">Reset Password</button>
+        </div>
+
+        <div class="faq-buttons">
+            <button onclick="quickQuestion('tuition payment')">Payment</button>
+            <button onclick="quickQuestion('contact helpdesk')">Contact</button>
+            <button onclick="quickQuestion('school schedule')">Schedule</button>
+        </div>
+
+        <div class="file-area">
+            <label for="fileUpload">Attach File:</label>
+            <input type="file" id="fileUpload">
+            <small>Visual only for future ticket attachment.</small>
         </div>
 
         <div class="input-area">
             <input type="text" id="user-input" placeholder="Type your concern here...">
             <button onclick="sendMessage()">Send</button>
+            <button onclick="clearChat()">Clear</button>
         </div>
 
         <div class="footer">
-            Helpdesk Contact: helpdesk@example.com
+            Helpdesk Contact: helpdesk@example.com | 0912-345-6789
         </div>
+
     </div>
 
     <script src="script.js"></script>
